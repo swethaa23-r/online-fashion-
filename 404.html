@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Look Not Found | STACKLY – Luxury Fashion Boutique</title>
+  <meta name="description" content="This look is nowhere to be found. The page you're looking for has stepped out of style. Let's get you back to something beautiful.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons (No emojis) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* ==========================================================================
+       STACKLY 404 Bespoke Editorial Fashion Layout
+       ========================================================================== */
+    :root {
+      --editorial-gold: #B69A65;
+      --editorial-ivory: #F8F6F1;
+      --editorial-charcoal: #171717;
+      --editorial-border: #E9E7E2;
+    }
+
+    body {
+      background-color: var(--editorial-ivory);
+      overflow-x: hidden;
+    }
+
+    /* --- Minimal Luxury Navigation --- */
+    .editorial-404-header {
+      background-color: var(--editorial-ivory);
+      border-bottom: 1px solid var(--editorial-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* --- Full-Screen Editorial 404 Hero Section --- */
+    .editorial-404-hero {
+      position: relative;
+      min-height: calc(100vh - var(--header-height));
+      display: flex;
+      align-items: center;
+      padding: 3.5rem 0 4.5rem;
+      background-color: var(--editorial-ivory);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(182, 154, 101, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(23, 23, 23, 0.03) 0%, transparent 40%);
+      border-bottom: 1px solid var(--editorial-border);
+      overflow: hidden;
+    }
+
+    .editorial-404-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Left Editorial Column */
+    .editorial-404-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 1.5rem;
+    }
+
+    /* Archive Chapter Pill */
+    .editorial-archive-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1.1rem;
+      background-color: rgba(182, 154, 101, 0.12);
+      border: 1px solid rgba(182, 154, 101, 0.35);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--editorial-charcoal);
+      margin-bottom: 1.75rem;
+    }
+
+    .editorial-archive-pill .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--editorial-gold);
+      box-shadow: 0 0 8px rgba(182, 154, 101, 0.8);
+      animation: pulseGoldDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGoldDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.5; }
+    }
+
+    /* Large Stylish 404 Typography */
+    .editorial-404-numeral-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    .editorial-404-numeral {
+      font-family: var(--font-serif);
+      font-size: clamp(6.5rem, 13vw, 11rem);
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.04em;
+      color: var(--editorial-charcoal);
+      position: relative;
+      user-select: none;
+      text-shadow: 4px 6px 0px rgba(182, 154, 101, 0.18);
+    }
+
+    .editorial-404-numeral-accent {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.4vw, 2.1rem);
+      font-weight: 400;
+      color: var(--editorial-gold);
+      letter-spacing: 0.05em;
+      transform: translateY(-0.75rem);
+    }
+
+    /* Main Heading */
+    .editorial-404-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--editorial-charcoal);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Description */
+    .editorial-404-description {
+      font-family: var(--font-sans);
+      font-size: clamp(1rem, 1.35vw, 1.15rem);
+      line-height: 1.75;
+      color: var(--color-grey-dark);
+      max-width: 540px;
+      margin-bottom: 2.75rem;
+    }
+
+    /* Action Buttons */
+    .editorial-404-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .editorial-btn {
+      min-width: 220px;
+      padding: 1.1rem 2.2rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.16em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .editorial-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .editorial-btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Decorative Fashion Strip */
+    .editorial-curation-strip {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--editorial-border);
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .curation-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .curation-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--editorial-gold);
+    }
+
+    .curation-val {
+      font-size: 0.82rem;
+      color: var(--editorial-charcoal);
+      font-weight: 500;
+    }
+
+    .curation-divider {
+      width: 1px;
+      height: 28px;
+      background-color: var(--editorial-border);
+    }
+
+    /* Right Editorial Column: High-Fashion Photography */
+    .editorial-404-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Image Reveal Mask */
+    .editorial-image-mask {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 5.2;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      box-shadow: 0 25px 60px -15px rgba(23, 23, 23, 0.22);
+      border: 1px solid rgba(182, 154, 101, 0.35);
+      background-color: var(--color-charcoal);
+    }
+
+    .editorial-fashion-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.05) saturate(0.95);
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+    }
+
+    .editorial-image-mask:hover .editorial-fashion-img {
+      transform: scale(1.06);
+      filter: contrast(1.1) saturate(1.05);
+    }
+
+    /* Vignette Gradient Overlay */
+    .editorial-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(23, 23, 23, 0.15) 0%,
+        rgba(23, 23, 23, 0) 40%,
+        rgba(23, 23, 23, 0.75) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Subtle Animated Floating Elements */
+    .floating-badge {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(182, 154, 101, 0.35);
+      border-radius: var(--radius-xs);
+      padding: 0.9rem 1.25rem;
+      box-shadow: 0 15px 35px -5px rgba(23, 23, 23, 0.18);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      animation: gentleFloat 5s infinite ease-in-out;
+    }
+
+    .floating-badge-top {
+      top: 2rem;
+      left: -2rem;
+    }
+
+    .floating-badge-bottom {
+      bottom: 2.25rem;
+      right: -1.75rem;
+      animation-delay: -2.5s;
+    }
+
+    @keyframes gentleFloat {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(0.5deg);
+      }
+    }
+
+    .floating-badge-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--editorial-ivory);
+      border: 1px solid var(--editorial-gold);
+      color: var(--editorial-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .floating-badge-text strong {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--editorial-charcoal);
+    }
+
+    .floating-badge-text span {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--color-grey-dark);
+      letter-spacing: 0.05em;
+    }
+
+    /* Floating Drifting Background Watermark */
+    .bg-floating-watermark {
+      position: absolute;
+      right: -2rem;
+      bottom: -3rem;
+      font-family: var(--font-serif);
+      font-size: clamp(8rem, 20vw, 22rem);
+      font-weight: 800;
+      color: rgba(23, 23, 23, 0.025);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+    }
+
+    /* --- Recommended Seasonal Section --- */
+    .recommended-section {
+      padding: 6rem 0 7rem;
+      background-color: var(--color-white);
+      position: relative;
+    }
+
+    /* --- Responsive Breakpoints --- */
+    @media (max-width: 991px) {
+      .editorial-404-hero {
+        padding: 3rem 0;
+      }
+
+      .editorial-404-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+      }
+
+      .editorial-404-content {
+        align-items: center;
+        padding-right: 0;
+      }
+
+      .editorial-404-numeral-wrap {
+        justify-content: center;
+      }
+
+      .editorial-404-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .editorial-404-btn-group {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .editorial-curation-strip {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .floating-badge-top {
+        left: 0.5rem;
+        top: 1rem;
+      }
+
+      .floating-badge-bottom {
+        right: 0.5rem;
+        bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .editorial-btn {
+        width: 100%;
+        min-width: 100%;
+      }
+
+      .editorial-404-btn-group {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .editorial-curation-strip {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .curation-divider {
+        display: none;
+      }
+
+      .floating-badge {
+        padding: 0.65rem 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar" id="top-announcement-bar">
+    <div class="announcement-inner">
+      <div class="announcement-left">
+        <span><i class="fa-solid fa-phone"></i> Atelier Concierge: <a href="tel:9090909090" style="color: inherit; text-decoration: none;">+91 9090909090</a></span>
+      </div>
+      <div class="announcement-center">
+        <span>Complimentary worldwide express shipping on orders over $250 • <strong>Guaranteed Authentic</strong></span>
+      </div>
+      <div class="announcement-right">
+        <a href="index.html#featured-categories" class="announcement-link">Discover Runway</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal Luxury Site Header -->
+  <header class="site-header editorial-404-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/icons/logo.webp" alt="STACKLY" class="brand-logo-img">
+      </a>
+
+      <!-- Minimal Navigation matching all other pages -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="404.html" class="nav-link">Collections</a>
+        <a href="404.html" class="nav-link">New Arrivals</a>
+        <a href="404.html" class="nav-link">Trending</a>
+        <a href="404.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-icon-btn open-wishlist-btn" aria-label="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-count-badge hidden">0</span>
+        </button>
+
+        <a href="cart.html" class="header-icon-btn open-cart-drawer-btn" aria-label="View Shopping Bag" style="margin-right: 0.35rem;">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count cart-count-badge hidden">0</span>
+        </a>
+
+        <a href="404.html" class="header-login-btn" id="header-login-btn" aria-label="Client Sign In">
+          <i class="fa-regular fa-user"></i>
+          <span>Login</span>
+        </a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/icons/logo.webp" alt="STACKLY" height="28" style="width: auto;">
+        <span class="mobile-drawer-tagline">HAUTE ATELIER</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="mobile-menu-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Search in Mobile Sidebar -->
+    <div class="mobile-drawer-search">
+      <form class="mobile-search-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search silhouettes, couture..." aria-label="Search silhouettes in drawer">
+        <button type="submit" aria-label="Submit search"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+
+    <div class="mobile-nav-links">
+      <span class="mobile-nav-category-label">COLLECTION DIRECTORY</span>
+      <a href="index.html" class="mobile-nav-link"><span class="nav-num">01</span><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">02</span><span>Collections</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">03</span><span>New Arrivals</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">04</span><span>Trending</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">05</span><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="mobile-client-actions">
+      <span class="mobile-nav-category-label">PRIVATE CLIENT SUITE</span>
+      <a href="cart.html" class="mobile-action-pill">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shopping Bag</span>
+        <span class="action-pill-badge cart-count-badge">0</span>
+      </a>
+      <button type="button" class="mobile-action-pill open-wishlist-btn" id="mobile-wishlist-trigger">
+        <i class="fa-regular fa-heart"></i>
+        <span>Private Wishlist</span>
+        <span class="action-pill-badge wishlist-count-badge">0</span>
+      </button>
+      <a href="404.html" class="mobile-action-pill active">
+        <i class="fa-regular fa-user"></i>
+        <span>Login / My Account</span>
+        <i class="fa-solid fa-chevron-right" style="margin-left: auto; font-size: 11px;"></i>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <p class="brand-tagline">STACKLY – Wear Your Confidence.</p>
+      <div class="footer-social-links">
+        <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <aside class="offcanvas-drawer" id="wishlist-drawer" aria-label="Wishlist Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Private Wishlist</h3>
+        <span class="drawer-count" id="wishlist-drawer-count">0 items</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="close-wishlist-drawer" aria-label="Close wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="wishlist-items-container"></div>
+  </aside>
+
+  <!-- Mini Cart Drawer -->
+  <aside class="offcanvas-drawer" id="cart-drawer" aria-label="Mini Cart Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Shopping Bag</h3>
+      </div>
+      <button type="button" class="btn-close-drawer" id="close-cart-drawer" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="mini-cart-items"></div>
+    <div class="drawer-footer">
+      <a href="cart.html" class="btn btn-primary btn-block">
+        <span>View Full Bag</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Catalog Search">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <span class="section-eyebrow">STACKLY ATELIER SEARCH</span>
+        <button type="button" class="search-modal-close-btn" id="close-search-modal" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-input-box">
+        <i class="fa-solid fa-magnifying-glass search-main-icon"></i>
+        <input type="text" id="header-search-input" class="search-main-input" placeholder="Type silhouette, fabric, or collection..." autocomplete="off">
+      </div>
+      <div class="search-results-wrapper" id="search-results-container"></div>
+    </div>
+  </div>
+
+  <!-- Main Content: Bespoke Editorial 404 Experience -->
+  <main>
+    <section class="editorial-404-hero">
+      <div class="bg-floating-watermark" aria-hidden="true">404</div>
+      
+      <div class="container">
+        <div class="editorial-404-grid">
+          
+          <!-- LEFT COLUMN: EDITORIAL TYPOGRAPHY & STORY -->
+          <div class="editorial-404-content">
+            <!-- Decorative Fashion Label -->
+            <div class="editorial-archive-pill">
+              <span class="pill-dot"></span>
+              <span>ATELIER ARCHIVE // MONOGRAPH N° 404</span>
+            </div>
+
+            <!-- Large Stylish Typography: 404 -->
+            <div class="editorial-404-numeral-wrap">
+              <span class="editorial-404-numeral">404</span>
+              <span class="editorial-404-numeral-accent">Silhouette Archived</span>
+            </div>
+
+            <!-- Main Heading as Requested -->
+            <h1 class="editorial-404-heading">
+              THIS LOOK IS NOWHERE TO BE FOUND.
+            </h1>
+
+            <!-- Description as Requested -->
+            <p class="editorial-404-description">
+              The page you're looking for has stepped out of style. Let's get you back to something beautiful.
+            </p>
+
+            <!-- Buttons as Requested -->
+            <div class="editorial-404-btn-group">
+              <!-- BACK TO HOME - links to index.html -->
+              <a href="index.html" class="btn btn-primary btn-lg editorial-btn">
+                <span>BACK TO HOME</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <!-- EXPLORE COLLECTION - links to the homepage product section -->
+              <a href="index.html#featured-categories" class="btn btn-outline btn-lg editorial-btn">
+                <span>EXPLORE COLLECTION</span>
+                <i class="fa-solid fa-compass"></i>
+              </a>
+            </div>
+
+            <!-- Additional Luxury Brand Metadata Details -->
+            <div class="editorial-curation-strip">
+              <div class="curation-item">
+                <span class="curation-label">EDITORIAL CURATION</span>
+                <span class="curation-val">STACKLY Runway Division</span>
+              </div>
+              <div class="curation-divider"></div>
+              <div class="curation-item">
+                <span class="curation-label">PRIVATE CONCIERGE</span>
+                <span class="curation-val"><a href="tel:9090909090" style="color: inherit; text-decoration: none;">+91 9090909090</a></span>
+              </div>
+              <div class="curation-divider"></div>
+              <div class="curation-item">
+                <span class="curation-label">FLAGSHIP ATELIER</span>
+                <span class="curation-val">MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 008</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: LUXURY FASHION PHOTOGRAPHY & FLOATING ELEMENTS -->
+          <div class="editorial-404-visual">
+            <div class="editorial-image-mask" id="editorial-image-mask">
+              <!-- High-Fashion Editorial Model Photography in WebP format -->
+              <picture>
+                <source srcset="assets/images/hero-runway.webp" type="image/webp">
+                <img 
+                  src="assets/images/hero-runway.webp" 
+                  alt="STACKLY Editorial Luxury Fashion Model" 
+                  class="editorial-fashion-img"
+                  loading="eager"
+                  onerror="this.onerror=null; this.src='assets/images/fashion-404.svg';"
+                >
+              </picture>
+              <div class="editorial-image-overlay"></div>
+
+              <!-- Subtle Animated Floating Element 1 (Top Left) -->
+              <div class="floating-badge floating-badge-top">
+                <div class="floating-badge-icon">
+                  <i class="fa-solid fa-gem"></i>
+                </div>
+                <div class="floating-badge-text">
+                  <strong>ARCHIVED LOOK</strong>
+                  <span>Autumn / Winter Monograph</span>
+                </div>
+              </div>
+
+              <!-- Subtle Animated Floating Element 2 (Bottom Right) -->
+              <div class="floating-badge floating-badge-bottom">
+                <div class="floating-badge-icon">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="floating-badge-text">
+                  <strong>DISCOVER RUNWAY</strong>
+                  <span>Living 2026 Collection &rarr;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick View Modal Component -->
+  <div class="quick-view-modal" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Product Quick View">
+    <div class="qv-backdrop" id="quick-view-backdrop"></div>
+    <div class="qv-dialog">
+      <button type="button" class="btn-close-qv" id="close-quick-view" aria-label="Close product view">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts: GSAP, ScrollTrigger, AOS & Core Architecture -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script src="js/api.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- GSAP Entrance Timeline for 404 Editorial Spread -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined') {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+        // 1. Watermark & Pill
+        tl.from('.bg-floating-watermark', {
+          opacity: 0,
+          scale: 0.85,
+          duration: 1.2
+        })
+        .from('.editorial-archive-pill', {
+          opacity: 0,
+          y: -18,
+          duration: 0.7
+        }, '-=0.8')
+
+        // 2. Large 404 Numeral & Accent
+        .from('.editorial-404-numeral', {
+          opacity: 0,
+          y: 45,
+          scale: 0.9,
+          duration: 1
+        }, '-=0.5')
+        .from('.editorial-404-numeral-accent', {
+          opacity: 0,
+          x: -25,
+          duration: 0.8
+        }, '-=0.7')
+
+        // 3. Heading & Description
+        .from('.editorial-404-heading', {
+          opacity: 0,
+          y: 30,
+          duration: 0.9
+        }, '-=0.6')
+        .from('.editorial-404-description', {
+          opacity: 0,
+          y: 20,
+          duration: 0.8
+        }, '-=0.6')
+
+        // 4. Buttons Stagger
+        .fromTo('.editorial-404-btn-group .editorial-btn', {
+          opacity: 0,
+          y: 20
+        }, {
+          opacity: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 0.8
+        }, '-=0.5')
+
+        // 5. Curation Details Strip
+        .from('.editorial-curation-strip', {
+          opacity: 0,
+          y: 15,
+          duration: 0.7
+        }, '-=0.4')
+
+        // 6. Image Reveal Effect with Curtain Mask
+        .from('#editorial-image-mask', {
+          clipPath: 'inset(100% 0 0 0)',
+          scale: 1.08,
+          duration: 1.3,
+          ease: 'power4.inOut'
+        }, 0.25)
+
+        // 7. Floating Badges Pop-in
+        .from('.floating-badge', {
+          opacity: 0,
+          scale: 0.8,
+          y: 25,
+          stagger: 0.2,
+          duration: 0.85,
+          ease: 'back.out(1.7)'
+        }, '-=0.6');
+      }
+    });
+  </script>
+</body>
+</html>

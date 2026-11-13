@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY – Style That Defines You | Luxury Fashion Boutique</title>
+  <meta name="description" content="STACKLY is an editorial luxury fashion boutique. Discover timeless fashion and express your individuality through bespoke haute couture, menswear, and accessories.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- AOS (Animate on Scroll) Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar" id="top-announcement-bar">
+    <div class="announcement-inner">
+      <div class="announcement-left">
+        <label for="header-currency-select" class="sr-only">Select Currency</label>
+        <select class="currency-selector" id="header-currency-select" aria-label="Currency Selector">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+        <span><i class="fa-solid fa-phone"></i> Atelier Concierge: <a href="tel:9090909090" style="color: inherit; text-decoration: none;">+91 9090909090</a></span>
+      </div>
+      <div class="announcement-center">
+        <span>Complimentary worldwide express shipping on orders over $250 • <strong>Private Concierge Available</strong></span>
+      </div>
+      <div class="announcement-right">
+        <a href="#newsletter" class="announcement-link">VIP Privilege: 15% Off</a>
+        <button type="button" class="btn-close-announcement" id="close-announcement" aria-label="Close notification banner">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Site Header (Sticky, Transparent to Solid Ivory) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Stackly Logo on Left -->
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/icons/logo.webp" alt="STACKLY" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation: Home, Collections, New Arrivals, Trending, About -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="404.html" class="nav-link">Collections</a>
+        <a href="404.html" class="nav-link">New Arrivals</a>
+        <a href="404.html" class="nav-link">Trending</a>
+        <a href="404.html" class="nav-link">About</a>
+      </nav>
+
+      <!-- Action Icons on Right: Wishlist, Shopping Bag & Login -->
+      <div class="header-actions">
+        <!-- Wishlist Button with Counter -->
+        <button type="button" class="header-icon-btn open-wishlist-btn" aria-label="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-count-badge hidden">0</span>
+        </button>
+
+        <!-- Shopping Bag Button with Live Cart Quantity -->
+        <a href="cart.html" class="header-icon-btn open-cart-drawer-btn" aria-label="View Shopping Bag" style="margin-right: 0.35rem;">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count cart-count-badge hidden">0</span>
+        </a>
+
+        <!-- Header Login Button (redirects to 404) -->
+        <a href="404.html" class="header-login-btn" id="header-login-btn" aria-label="Client Sign In">
+          <i class="fa-regular fa-user"></i>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button with 3 animated lines -->
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/icons/logo.webp" alt="STACKLY" height="28" style="width: auto;">
+        <span class="mobile-drawer-tagline">HAUTE ATELIER</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="mobile-menu-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Search in Mobile Sidebar -->
+    <div class="mobile-drawer-search">
+      <form class="mobile-search-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search silhouettes, couture..." aria-label="Search silhouettes in drawer">
+        <button type="submit" aria-label="Submit search"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+
+    <div class="mobile-nav-links">
+      <span class="mobile-nav-category-label">COLLECTION DIRECTORY</span>
+      <a href="index.html" class="mobile-nav-link active"><span class="nav-num">01</span><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">02</span><span>Collections</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">03</span><span>New Arrivals</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">04</span><span>Trending</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">05</span><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="mobile-client-actions">
+      <span class="mobile-nav-category-label">PRIVATE CLIENT SUITE</span>
+      <a href="cart.html" class="mobile-action-pill">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shopping Bag</span>
+        <span class="action-pill-badge cart-count-badge">0</span>
+      </a>
+      <button type="button" class="mobile-action-pill open-wishlist-btn" id="mobile-wishlist-trigger">
+        <i class="fa-regular fa-heart"></i>
+        <span>Private Wishlist</span>
+        <span class="action-pill-badge wishlist-count-badge">0</span>
+      </button>
+      <a href="404.html" class="mobile-action-pill">
+        <i class="fa-regular fa-user"></i>
+        <span>Login / My Account</span>
+        <i class="fa-solid fa-chevron-right" style="margin-left: auto; font-size: 11px;"></i>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <p class="brand-tagline">STACKLY – Wear Your Confidence.</p>
+      <div class="footer-social-links">
+        <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Off-Canvas Wishlist Drawer -->
+  <aside class="offcanvas-drawer" id="wishlist-drawer" aria-label="Wishlist Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Private Wishlist</h3>
+        <span class="drawer-count" id="wishlist-drawer-count">0 items</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="close-wishlist-drawer" aria-label="Close wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="wishlist-items-container"></div>
+    <div class="drawer-footer">
+      <a href="cart.html" class="btn btn-primary btn-block">
+        <span>View Shopping Bag</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Off-Canvas Mini-Cart Drawer -->
+  <aside class="offcanvas-drawer" id="cart-drawer" aria-label="Mini Cart Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Shopping Bag</h3>
+      </div>
+      <button type="button" class="btn-close-drawer" id="close-cart-drawer" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="mini-cart-items"></div>
+    <div class="drawer-footer">
+      <div class="summary-row" style="margin-bottom: 1rem;">
+        <span>Subtotal</span>
+        <strong id="mini-cart-subtotal" style="font-size: 1.1rem;">$0.00</strong>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <a href="cart.html" class="btn btn-primary btn-block">
+          <span>Review Bag &amp; Promo Code</span>
+        </a>
+        <a href="checkout.html" class="btn btn-outline btn-block">
+          <span>Fast Checkout</span>
+          <i class="fa-solid fa-lock"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Drawer Backdrop Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Catalog Search">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <span class="section-eyebrow">STACKLY ATELIER SEARCH</span>
+        <button type="button" class="search-modal-close-btn" id="close-search-modal" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="search-input-box">
+        <i class="fa-solid fa-magnifying-glass search-main-icon"></i>
+        <input type="text" id="header-search-input" class="search-main-input" placeholder="Type silhouette, fabric, or collection..." autocomplete="off">
+        <button type="button" class="search-clear-btn" id="clear-search-btn" style="display: none;" aria-label="Clear query">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+
+      <div class="search-quick-tags">
+        <span class="search-tag-label">Popular Inquiries:</span>
+        <button type="button" class="search-tag-pill" data-tag="gown">Gowns</button>
+        <button type="button" class="search-tag-pill" data-tag="silk">Silk</button>
+        <button type="button" class="search-tag-pill" data-tag="handbag">Handbags</button>
+        <button type="button" class="search-tag-pill" data-tag="earring">Jewellery</button>
+        <button type="button" class="search-tag-pill" data-tag="glasses">Sunglasses</button>
+        <button type="button" class="search-tag-pill" data-tag="watch">Horology</button>
+      </div>
+
+      <div class="search-results-wrapper" id="search-results-container"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION: International Editorial Luxury Fashion Split-Screen Experience -->
+    <section class="hero-editorial-section" id="hero">
+      <!-- Background Ambient Watermark -->
+      <div class="hero-watermark" aria-hidden="true">STACKLY</div>
+
+      <!-- Floating Gold Decorative Elements -->
+      <div class="hero-deco-line hero-deco-line-1" aria-hidden="true"></div>
+      <div class="hero-deco-line hero-deco-line-2" aria-hidden="true"></div>
+      <div class="hero-deco-circle" aria-hidden="true"></div>
+
+      <div class="hero-split-container">
+        <!-- LEFT COLUMN: Editorial Typography & Campaign Story (~45% width) -->
+        <div class="hero-content-col">
+          <!-- Small Animated Collection Label -->
+          <div class="hero-collection-tag" id="hero-collection-tag">
+            <span class="hero-tag-gem"><i class="fa-solid fa-gem"></i></span>
+            <span class="hero-tag-text" id="hero-tag-text">AUTUMN / WINTER 2026 COLLECTION</span>
+          </div>
+
+          <!-- Large Oversized Typography: DRESS BEYOND THE ORDINARY -->
+          <h1 class="hero-headline" id="hero-headline" aria-label="DRESS BEYOND THE ORDINARY.">
+            <span class="hero-line"><span class="hero-word">DRESS</span> <span class="hero-word hero-accent-word">BEYOND</span></span>
+            <span class="hero-line"><span class="hero-word">THE</span> <span class="hero-word hero-accent-word">ORDINARY.</span></span>
+          </h1>
+
+          <!-- Fashion Editorial Subtitle -->
+          <p class="hero-subtitle" id="hero-subtitle">
+            Sculpted Italian silk crepe, fluid floor-length draping, and architectural tailoring crafted for memorable gala appearances.
+          </p>
+
+          <!-- Two Premium CTA Buttons: SHOP WOMEN & EXPLORE MEN (redirects to 404) -->
+          <div class="hero-cta-group">
+            <a href="404.html" class="btn hero-btn hero-btn-primary" id="hero-shop-women-btn">
+              <span>SHOP WOMEN</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="404.html" class="btn hero-btn hero-btn-outline" id="hero-shop-men-btn">
+              <span>EXPLORE MEN</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Bottom Meta Strip: Collection Indicator (01 / 04), Slider Navigation & Scroll Down -->
+          <div class="hero-meta-strip">
+            <div class="hero-collection-counter">
+              <span class="hero-current-slide" id="hero-slide-num">01</span>
+              <span class="hero-counter-slash">/</span>
+              <span class="hero-total-slides">04</span>
+            </div>
+
+            <!-- Slide Navigation Controls -->
+            <div class="hero-slide-nav">
+              <button type="button" class="hero-nav-btn" id="hero-prev-btn" aria-label="Previous fashion collection">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="hero-nav-btn" id="hero-next-btn" aria-label="Next fashion collection">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <!-- Collection Slide Dots Indicator -->
+            <div class="hero-slide-dots" id="hero-slide-dots">
+              <button type="button" class="hero-dot active" data-slide="0" aria-label="Go to collection 1"></button>
+              <button type="button" class="hero-dot" data-slide="1" aria-label="Go to collection 2"></button>
+              <button type="button" class="hero-dot" data-slide="2" aria-label="Go to collection 3"></button>
+              <button type="button" class="hero-dot" data-slide="3" aria-label="Go to collection 4"></button>
+            </div>
+
+            <!-- Stylish Scroll-Down Indicator -->
+            <a href="#featured-categories" class="hero-scroll-indicator" aria-label="Scroll to curated capsules">
+              <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+              <span class="scroll-label">DISCOVER CAPSULES</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: High-Fashion Editorial Photography (~55% width) -->
+        <div class="hero-media-col" id="hero-media-col">
+          <!-- Small Vertical Text Label -->
+          <div class="hero-vertical-tag" aria-hidden="true">STACKLY EDITION 2026</div>
+
+          <!-- Editorial Photography Frame with Crop & Reveal -->
+          <div class="hero-image-frame" id="hero-image-frame">
+            <img 
+              id="hero-main-img" 
+              src="assets/images/hero-editorial-model.webp" 
+              alt="STACKLY Autumn / Winter Haute Couture Evening Gown Campaign" 
+              width="700" 
+              height="880" 
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
+            <div class="hero-image-overlay"></div>
+
+            <!-- Small Image Number / Lookbook Indicator inside frame -->
+            <div class="hero-lookbook-badge" id="hero-lookbook-badge">
+              LOOK 01 / AUTUMN COUTURE
+            </div>
+
+            <!-- Decorative Frame Accents -->
+            <div class="hero-frame-corner hero-corner-tl" aria-hidden="true"></div>
+            <div class="hero-frame-corner hero-corner-br" aria-hidden="true"></div>
+          </div>
+
+          <!-- Floating Glass-Style Collection Information Card -->
+          <div class="hero-glass-card" id="hero-glass-card">
+            <div class="glass-card-header">
+              <span class="glass-status-dot"></span>
+              <span class="glass-capsule-tag">LIMITED CAPSULE</span>
+              <span class="glass-badge">HAUTE RUNWAY</span>
+            </div>
+            <h4 class="glass-title" id="glass-title">Haute Monograph N° 01</h4>
+            <p class="glass-desc" id="glass-desc">Pure Italian Mulberry Silk &amp; Hand-Pleated Crepe Draped in Paris.</p>
+            <div class="glass-card-footer">
+              <span class="glass-spec" id="glass-spec">Artisanal Run · 50 Pieces</span>
+              <span class="glass-price" id="glass-price">$380.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Marquee Ticker -->
+    <div class="brand-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">STYLE THAT DEFINES YOU</span>
+        <span class="marquee-item">HAUTE COUTURE</span>
+        <span class="marquee-item">TIMELESS SILHOUETTES</span>
+        <span class="marquee-item">PARISIAN ATELIER CRAFT</span>
+        <span class="marquee-item">SUSTAINABLE LUXURY</span>
+        <span class="marquee-item">WEAR YOUR CONFIDENCE</span>
+        <!-- Duplicated for seamless continuous scroll -->
+        <span class="marquee-item">STYLE THAT DEFINES YOU</span>
+        <span class="marquee-item">HAUTE COUTURE</span>
+        <span class="marquee-item">TIMELESS SILHOUETTES</span>
+        <span class="marquee-item">PARISIAN ATELIER CRAFT</span>
+        <span class="marquee-item">SUSTAINABLE LUXURY</span>
+        <span class="marquee-item">WEAR YOUR CONFIDENCE</span>
+      </div>
+    </div>
+
+    <!-- FEATURED CATEGORIES: 4 Visual Cards (Women's, Men's, Kids', Accessories) -->
+    <section class="curated-categories-section" id="featured-categories">
+      <div class="container">
+        <div class="section-header-center" data-aos="fade-up">
+          <span class="section-eyebrow">SIGNATURE CAPSULES</span>
+          <h2 class="section-title">Featured Fashion Categories</h2>
+          <p class="section-subtitle">Select a category below to instantly filter the atelier collection on this page.</p>
+        </div>
+
+        <div class="curated-grid">
+          <!-- 1. Women's Fashion -->
+          <article class="category-pillar-card category-card-trigger" data-category="women">
+            <img class="pillar-bg" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80" alt="Women's Fashion" onerror="this.src='assets/images/hero-fashion-2.svg'">
+            <div class="pillar-overlay"></div>
+            <div class="pillar-content">
+              <span class="pillar-eyebrow">Haute Runway</span>
+              <h3 class="pillar-title">Women's Fashion</h3>
+              <div class="pillar-link">
+                <span>Explore Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Men's Fashion -->
+          <article class="category-pillar-card category-card-trigger" data-category="men">
+            <img class="pillar-bg" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Men's Fashion" onerror="this.src='assets/images/hero-fashion-2.svg'">
+            <div class="pillar-overlay"></div>
+            <div class="pillar-content">
+              <span class="pillar-eyebrow">Sartorial Precision</span>
+              <h3 class="pillar-title">Men's Fashion</h3>
+              <div class="pillar-link">
+                <span>Explore Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Kids' Fashion -->
+          <article class="category-pillar-card category-card-trigger" data-category="kids">
+            <img class="pillar-bg" src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=700&q=80" alt="Kids' Fashion" onerror="this.src='assets/images/hero-fashion-2.svg'">
+            <div class="pillar-overlay"></div>
+            <div class="pillar-content">
+              <span class="pillar-eyebrow">Junior Atelier</span>
+              <h3 class="pillar-title">Kids' Fashion</h3>
+              <div class="pillar-link">
+                <span>Explore Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Accessories -->
+          <article class="category-pillar-card category-card-trigger" data-category="accessories">
+            <img class="pillar-bg" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Luxury Accessories" onerror="this.src='assets/images/hero-fashion-2.svg'">
+            <div class="pillar-overlay"></div>
+            <div class="pillar-content">
+              <span class="pillar-eyebrow">Leather &amp; Jewellery</span>
+              <h3 class="pillar-title">Accessories</h3>
+              <div class="pillar-link">
+                <span>Explore Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. NEW ARRIVALS: Luxury Fashion Editorial Shopping Experience -->
+    <section class="products-catalog-section new-arrivals-editorial-section" id="new-arrivals" style="background-color: var(--color-ivory); border-top: 1px solid var(--color-border); position: relative; overflow: hidden;">
+      <div class="container">
+        <!-- New Arrivals Editorial Header -->
+        <div class="new-arrivals-editorial-header" data-aos="fade-up">
+          <div class="editorial-header-top">
+            <span class="editorial-eyebrow-pill">DISCOVER THE COLLECTION</span>
+            <div class="editorial-gold-rule"></div>
+            <span class="editorial-season-badge">A/W 2026 EDITORIAL</span>
+          </div>
+          <div class="editorial-header-main">
+            <div class="editorial-title-box">
+              <h2 class="editorial-title-display">
+                <span class="title-txt-dark">NEW</span>
+                <span class="title-txt-gold-serif">ARRIVALS</span>
+              </h2>
+              <p class="editorial-title-desc">
+                An orchestrated blend of architectural silhouettes, fluid silks, and bespoke atelier tailoring. Curated for the discerning modern aesthetic.
+              </p>
+            </div>
+            <div class="editorial-header-stats">
+              <div class="editorial-count-chip">
+                <span class="count-pulse-dot"></span>
+                <span id="catalog-results-count">Curating atelier collection...</span>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm btn-editorial-view-all" id="btn-view-all-collection" onclick="window.location.href='404.html'">
+                <span>View All Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Navigation (Requirement 6) -->
+        <div class="editorial-filter-nav-wrap" data-aos="fade-up">
+          <div class="editorial-category-nav-rail" role="tablist" id="editorial-category-rail">
+            <button type="button" class="editorial-cat-tab active" data-category="all">
+              <span>All Products</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="women">
+              <span>Women</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="men">
+              <span>Men</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="dresses">
+              <span>Dresses</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="footwear">
+              <span>Footwear</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="bags">
+              <span>Bags</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="accessories">
+              <span>Accessories</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="watches">
+              <span>Watches</span>
+            </button>
+            <button type="button" class="editorial-cat-tab" data-category="beauty">
+              <span>Beauty</span>
+            </button>
+            <div class="category-nav-gold-indicator" id="category-nav-gold-indicator"></div>
+          </div>
+
+          <!-- Secondary Filter Controls: Search, Sort, Price Range (Requirement 7) -->
+          <div class="editorial-filter-actions">
+            <!-- Search Input -->
+            <div class="editorial-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="catalog-live-search" placeholder="Search pieces by title, fabric, style..." aria-label="Search products by title">
+              <button type="button" class="search-clear-btn" id="catalog-search-clear" aria-label="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Sort By Dropdown -->
+            <div class="editorial-select-group">
+              <label for="catalog-sort-select" class="editorial-select-label">Sort</label>
+              <div class="editorial-select-wrap">
+                <select id="catalog-sort-select" aria-label="Sort products">
+                  <option value="featured">Featured Pieces</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="newest">Sort by Newest</option>
+                  <option value="popularity">Sort by Popularity</option>
+                  <option value="discount">Seasonal Discount</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-chevron"></i>
+              </div>
+            </div>
+
+            <!-- Price Range Filter Dropdown -->
+            <div class="editorial-select-group">
+              <label for="catalog-price-select" class="editorial-select-label">Price</label>
+              <div class="editorial-select-wrap">
+                <select id="catalog-price-select" aria-label="Filter products by price range">
+                  <option value="all">All Prices</option>
+                  <option value="under-100">Under $100</option>
+                  <option value="100-300">$100 – $300</option>
+                  <option value="above-300">Above $300</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-chevron"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Editorial Mixed-Layout Showcase (Requirement 3) -->
+        <div class="editorial-catalog-showcase" id="new-arrivals-grid">
+          <!-- Dynamically populated with:
+               ROW 1: 1 Featured large card (2 cols) + 2 Standard cards
+               ROW 2: 4 cards with distinct presentation styles
+               ROW 3: Full-width promotional fashion banner
+               ROW 4: Additional products grid
+          -->
+        </div>
+
+        <!-- Load More Section (Requirement 8) -->
+        <div class="editorial-load-more-container" id="catalog-load-more-container">
+          <button type="button" class="btn btn-outline btn-editorial-load-more" id="catalog-load-more-btn" onclick="window.location.href='404.html'">
+            <span class="load-more-spinner-gold" id="load-more-spinner"></span>
+            <span class="load-more-btn-text" id="load-more-btn-text">LOAD MORE SILHOUETTES</span>
+            <i class="fa-solid fa-arrow-right load-more-icon" id="load-more-icon"></i>
+          </button>
+          <div class="editorial-load-status" id="catalog-load-status"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TRENDING PRODUCTS: Dynamic Editorial Products with Infinite Marquee Loop -->
+    <section class="products-catalog-section trending-marquee-section" id="trending" style="background-color: var(--color-ivory); border-top: 1px solid var(--color-border); overflow: hidden;">
+      <div class="container">
+        <div class="trending-header-bar" data-aos="fade-up">
+          <div class="trending-header-text">
+            <span class="section-eyebrow">CURRENTLY COVETED</span>
+            <h2 class="section-title">Trending Products</h2>
+            <p class="section-subtitle">Most sought-after pieces of the season, defined by high customer ratings and editorial acclaim.</p>
+          </div>
+          <div class="trending-marquee-controls">
+            <div class="marquee-live-indicator">
+              <span class="marquee-pulse-dot"></span>
+              <span class="marquee-live-label">RUNWAY LOOP</span>
+            </div>
+            <div class="marquee-action-btns">
+              <button type="button" class="marquee-btn" id="trending-dir-left-btn" aria-label="Marquee flow left">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="marquee-btn" id="trending-pause-btn" aria-label="Pause or resume marquee animation">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+              <button type="button" class="marquee-btn" id="trending-dir-right-btn" aria-label="Marquee flow right">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trending-marquee-outer">
+        <div class="trending-marquee-viewport" id="trending-marquee-viewport">
+          <div class="trending-marquee-track" id="trending-grid">
+            <!-- Populated dynamically with repeated trending pieces for continuous infinite loop -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CUSTOMER TESTIMONIALS: Client Endorsements Horizontal Scroll -->
+    <section class="testimonials-section" id="testimonials">
+      <div id="about" style="position: absolute; top: -80px;"></div>
+      <div class="container">
+        <div class="testimonials-header-bar" data-aos="fade-up" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2.5rem;">
+          <div class="testimonials-header-text" style="text-align: center; margin: 0 auto 1.5rem;">
+            <span class="section-eyebrow" style="display: block; text-align: center;">CLIENT ENDORSEMENTS</span>
+            <h2 class="section-title" style="text-align: center;">Words From Our Private Circle</h2>
+            <p class="section-subtitle" style="text-align: center; margin: 0 auto;">Real experiences shared by patrons of the STACKLY boutique worldwide.</p>
+          </div>
+          <div class="testimonials-nav-controls">
+            <button type="button" class="testimonial-nav-btn prev-btn" id="testimonial-prev-btn" aria-label="Previous client testimonial">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button type="button" class="testimonial-nav-btn next-btn" id="testimonial-next-btn" aria-label="Next client testimonial">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonials-scroll-wrapper">
+          <div class="testimonials-scroll-rail" id="testimonials-scroll-rail">
+            <!-- Card 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "The tailoring on the Silk Gown is breathtaking. It feels like haute couture custom-fitted in Paris. Arrived within two days in exquisite satin packaging."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">CL</div>
+                <div class="author-meta">
+                  <h4>Charlotte Laurent</h4>
+                  <span>Private Client • Geneva</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "The Savile Row structured shirts and leather goods represent an unparalleled level of craftsmanship. STACKLY has become the cornerstone of my professional wardrobe."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">JS</div>
+                <div class="author-meta">
+                  <h4>Julian Sterling</h4>
+                  <span>Architectural Director • London</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "From the intuitive online boutique to the concierge service, every touchpoint feels bespoke. The Emerald Crystal Cascade Earrings command compliments at every gala."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">VD</div>
+                <div class="author-meta">
+                  <h4>Vivienne Dubois</h4>
+                  <span>Creative Consultant • New York</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "The craftsmanship and drape of the silk ensembles from STACKLY are unmatched. Having their atelier concierge in Salem with such responsive service makes every bespoke purchase effortless."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AS</div>
+                <div class="author-meta">
+                  <h4>Ananya Sundaram</h4>
+                  <span>Verified Haute Client • Salem / Chennai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "STACKLY combines Savile Row precision with modern Parisian chic. The wool overcoat and calfskin accessories are the finest additions to my seasonal rotation. Absolutely sublime."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MT</div>
+                <div class="author-meta">
+                  <h4>Marcus Thorne</h4>
+                  <span>Private Collector • Milan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials-progress-row">
+            <div class="testimonials-progress-track">
+              <div class="testimonials-progress-bar" id="testimonials-progress-bar"></div>
+            </div>
+            <div class="testimonials-counter-box">
+              <span id="testimonials-current-index">01</span> / <span id="testimonials-total-count">05</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER: Email Input, Subscribe Button, Validation, LocalStorage Persistence -->
+    <section class="vip-newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-card-inner" data-aos="zoom-in">
+          <span class="section-eyebrow">PRIVATE CLIENT INVITATION</span>
+          <h2 class="section-title">Join the STACKLY Circle</h2>
+          <p class="section-subtitle">
+            Subscribe for private invitations to trunk shows, seasonal previews, and receive 15% off your opening order with promo code <strong>STACKLYVIP</strong>.
+          </p>
+
+          <form class="newsletter-form newsletter-subscription-form" id="newsletter-form" novalidate>
+            <div class="newsletter-input-wrap" style="display: flex; gap: 0.5rem; justify-content: center; max-width: 540px; margin: 0 auto; width: 100%;">
+              <input type="email" id="newsletter-email-input" class="newsletter-input" placeholder="Enter your confidential email address..." aria-label="Email address for VIP membership" autocomplete="email">
+              <button type="submit" class="btn btn-primary" id="newsletter-submit-btn">
+                <span>Subscribe</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="newsletter-error-msg" id="newsletter-error-msg" style="display: none; color: #ff6b6b; font-size: 0.85rem; margin-top: 0.65rem; text-align: center; font-weight: 500;"></div>
+          </form>
+          <p class="newsletter-privacy-note">Your confidentiality is paramount. Stored securely. Unsubscribe with one click.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. GLOBAL FOOTER: Stackly Brand, Navigation, Customer Support, Payment Badges & Copyright -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Logo & Brand Description -->
+        <div class="footer-col footer-brand-col">
+          <img src="assets/icons/logo-light.webp" alt="STACKLY" class="brand-logo-img">
+          <p class="footer-tagline">
+            STACKLY – Wear Your Confidence. An editorial luxury fashion boutique dedicated to timeless silhouettes, exquisite craftsmanship, and effortless poise.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="#featured-categories" class="footer-nav-link">Collections</a></li>
+            <li><a href="#new-arrivals" class="footer-nav-link">New Arrivals</a></li>
+            <li><a href="#trending" class="footer-nav-link">Trending</a></li>
+            <li><a href="#about" class="footer-nav-link">About Brand</a></li>
+            <li><a href="cart.html" class="footer-nav-link">Shopping Bag</a></li>
+            <li><a href="checkout.html" class="footer-nav-link">Checkout</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Support Links (All Redirect to 404) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Customer Support</h4>
+          <ul class="footer-nav-list">
+            <li><a href="404.html" class="footer-nav-link">Track Your Bag</a></li>
+            <li><a href="404.html" class="footer-nav-link">Express Checkout Help</a></li>
+            <li><a href="404.html" class="footer-nav-link">Shipping &amp; Delivery</a></li>
+            <li><a href="404.html" class="footer-nav-link">Complimentary Returns</a></li>
+            <li><a href="404.html" class="footer-nav-link">Boutique Appointments</a></li>
+            <li><a href="404.html" class="footer-nav-link">Customer Concierge Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Flagship Atelier & Concierge -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">The Maison</h4>
+          <div class="footer-contact-info">
+            <p><strong>STACKLY Flagship Atelier</strong></p>
+            <p>MMR Complex, Chinna Thirupathi,</p>
+            <p>Near Chinna Muniyappan Kovil,</p>
+            <p>Salem - 636 008, Tamil Nadu</p>
+            <p style="margin-top: 0.75rem;"><strong>Private Concierge:</strong></p>
+            <p>concierge@stackly-boutique.com</p>
+            <p><a href="tel:9090909090" style="color: inherit; text-decoration: none;">+91 9090909090</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">
+          &copy; 2026 STACKLY Maison Inc. All rights reserved. Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript.
+        </p>
+        <div class="footer-payment-badges">
+          <img src="assets/icons/visa.svg" alt="Visa Accepted">
+          <img src="assets/icons/mastercard.svg" alt="Mastercard Accepted">
+          <img src="assets/icons/amex.svg" alt="American Express Accepted">
+          <img src="assets/icons/applepay.svg" alt="Apple Pay Accepted">
+          <img src="assets/icons/paypal.svg" alt="PayPal Accepted">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Component -->
+  <div class="quick-view-modal" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Product Quick View">
+    <div class="qv-backdrop" id="quick-view-backdrop"></div>
+    <div class="qv-dialog">
+      <button type="button" class="btn-close-qv" id="close-quick-view" aria-label="Close product view">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts: GSAP, ScrollTrigger, AOS, and Custom Application Modules -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <script src="js/api.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Order | STACKLY – Luxury Fashion Boutique</title>
+  <meta name="description" content="Secure luxury checkout for your STACKLY bespoke apparel and artisanal accessories.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar" id="top-announcement-bar">
+    <div class="announcement-inner">
+      <div class="announcement-left">
+        <label for="checkout-currency-select" class="sr-only">Select Currency</label>
+        <select class="currency-selector" id="checkout-currency-select" aria-label="Currency Selector">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+        <span><i class="fa-solid fa-lock"></i> 256-Bit SSL Encrypted Checkout</span>
+      </div>
+      <div class="announcement-center">
+        <span>Complimentary express delivery on orders over $250 • <strong>Guaranteed Authentic</strong></span>
+      </div>
+      <div class="announcement-right">
+        <span>Atelier Assistance: <a href="tel:9090909090" style="color: inherit; text-decoration: none;">+91 9090909090</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="assets/icons/logo.webp" alt="STACKLY" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation matching all other pages -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="404.html" class="nav-link">Collections</a>
+        <a href="404.html" class="nav-link">New Arrivals</a>
+        <a href="404.html" class="nav-link">Trending</a>
+        <a href="404.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-icon-btn open-wishlist-btn" aria-label="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-count-badge hidden">0</span>
+        </button>
+
+        <a href="cart.html" class="header-icon-btn open-cart-drawer-btn" aria-label="View Shopping Bag" style="margin-right: 0.35rem;">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count cart-count-badge hidden">0</span>
+        </a>
+
+        <a href="404.html" class="header-login-btn" id="header-login-btn" aria-label="Client Sign In">
+          <i class="fa-regular fa-user"></i>
+          <span>Login</span>
+        </a>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="assets/icons/logo.webp" alt="STACKLY" height="28" style="width: auto;">
+        <span class="mobile-drawer-tagline">HAUTE ATELIER</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="mobile-menu-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Search in Mobile Sidebar -->
+    <div class="mobile-drawer-search">
+      <form class="mobile-search-form" onsubmit="event.preventDefault(); window.location.href='404.html';">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search silhouettes, couture..." aria-label="Search silhouettes in drawer">
+        <button type="submit" aria-label="Submit search"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+
+    <div class="mobile-nav-links">
+      <span class="mobile-nav-category-label">COLLECTION DIRECTORY</span>
+      <a href="index.html" class="mobile-nav-link"><span class="nav-num">01</span><span>Home</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">02</span><span>Collections</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">03</span><span>New Arrivals</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">04</span><span>Trending</span><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="404.html" class="mobile-nav-link"><span class="nav-num">05</span><span>About</span><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="mobile-client-actions">
+      <span class="mobile-nav-category-label">PRIVATE CLIENT SUITE</span>
+      <a href="cart.html" class="mobile-action-pill">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shopping Bag</span>
+        <span class="action-pill-badge cart-count-badge">0</span>
+      </a>
+      <button type="button" class="mobile-action-pill open-wishlist-btn" id="mobile-wishlist-trigger">
+        <i class="fa-regular fa-heart"></i>
+        <span>Private Wishlist</span>
+        <span class="action-pill-badge wishlist-count-badge">0</span>
+      </button>
+      <a href="404.html" class="mobile-action-pill">
+        <i class="fa-regular fa-user"></i>
+        <span>Login / My Account</span>
+        <i class="fa-solid fa-chevron-right" style="margin-left: auto; font-size: 11px;"></i>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <p class="brand-tagline">STACKLY – Wear Your Confidence.</p>
+      <div class="footer-social-links">
+        <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="404.html" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <aside class="offcanvas-drawer" id="wishlist-drawer" aria-label="Wishlist Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Private Wishlist</h3>
+        <span class="drawer-count" id="wishlist-drawer-count">0 items</span>
+      </div>
+      <button type="button" class="btn-close-drawer" id="close-wishlist-drawer" aria-label="Close wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="wishlist-items-container"></div>
+  </aside>
+
+  <!-- Mini Cart Drawer -->
+  <aside class="offcanvas-drawer" id="cart-drawer" aria-label="Mini Cart Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3 class="drawer-title">Shopping Bag</h3>
+      </div>
+      <button type="button" class="btn-close-drawer" id="close-cart-drawer" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="mini-cart-items"></div>
+    <div class="drawer-footer">
+      <a href="cart.html" class="btn btn-primary btn-block">
+        <span>View Full Bag</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Catalog Search">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <span class="section-eyebrow">STACKLY ATELIER SEARCH</span>
+        <button type="button" class="search-modal-close-btn" id="close-search-modal" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-input-box">
+        <i class="fa-solid fa-magnifying-glass search-main-icon"></i>
+        <input type="text" id="header-search-input" class="search-main-input" placeholder="Type silhouette, fabric, or collection..." autocomplete="off">
+      </div>
+      <div class="search-results-wrapper" id="search-results-container"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- CHECKOUT INTRO: Breadcrumb, Heading, Subtitle -->
+    <section class="checkout-page-header">
+      <div class="container">
+        <nav class="checkout-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="cart.html">Cart</a>
+          <span class="separator">/</span>
+          <span class="current">Checkout</span>
+        </nav>
+        <h1 class="checkout-page-title">COMPLETE YOUR ORDER</h1>
+        <p class="checkout-page-subtitle">Just a few details stand between you and your new style.</p>
+      </div>
+    </section>
+
+    <!-- TWO-COLUMN CHECKOUT INTERFACE -->
+    <section class="checkout-page-section" id="checkout-page-container">
+      <div class="container">
+        <div class="checkout-layout-grid">
+          
+          <!-- LEFT SIDE: CUSTOMER INFORMATION FORM -->
+          <div class="checkout-main-col">
+            <form id="checkout-main-form" class="checkout-form-card" novalidate>
+              
+              <!-- 1. Contact Information -->
+              <div class="checkout-section-block">
+                <div class="checkout-block-header">
+                  <h2 class="checkout-block-title">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>1. Contact Information</span>
+                  </h2>
+                </div>
+
+                <div class="form-group">
+                  <label for="full-name" class="form-label">Full Name *</label>
+                  <input type="text" id="full-name" class="form-input" placeholder="e.g. Elena Vance" required>
+                  <span class="form-error-msg"></span>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="email-address" class="form-label">Email Address *</label>
+                    <input type="email" id="email-address" class="form-input" placeholder="e.g. elena@maison.com" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone-number" class="form-label">Phone Number (10-Digit Mobile) *</label>
+                    <input type="tel" id="phone-number" class="form-input" placeholder="e.g. 9090909090" maxlength="10" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Shipping Address -->
+              <div class="checkout-section-block">
+                <div class="checkout-block-header">
+                  <h2 class="checkout-block-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>2. Shipping Address</span>
+                  </h2>
+                </div>
+
+                <div class="form-group">
+                  <label for="street-address" class="form-label">Address (House / Street / Road) *</label>
+                  <input type="text" id="street-address" class="form-input" placeholder="e.g. MMR Complex, Chinna Thirupathi" required>
+                  <span class="form-error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="apartment-landmark" class="form-label">Apartment / Landmark (Optional)</label>
+                  <input type="text" id="apartment-landmark" class="form-input" placeholder="e.g. Near Chinna Muniyappan Kovil">
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="city" class="form-label">City *</label>
+                    <input type="text" id="city" class="form-input" placeholder="e.g. Salem" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="state" class="form-label">State *</label>
+                    <input type="text" id="state" class="form-input" placeholder="e.g. Tamil Nadu" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="pin-code" class="form-label">PIN Code (6-Digit Indian Code) *</label>
+                    <input type="text" id="pin-code" class="form-input" placeholder="e.g. 636008" maxlength="6" required>
+                    <span class="form-error-msg"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="country" class="form-label">Country *</label>
+                    <select id="country" class="form-select" required>
+                      <option value="India" selected>India</option>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="France">France</option>
+                      <option value="United Arab Emirates">United Arab Emirates</option>
+                      <option value="Singapore">Singapore</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Delivery Options -->
+              <div class="checkout-section-block">
+                <div class="checkout-block-header">
+                  <h2 class="checkout-block-title">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>3. Delivery Options</span>
+                  </h2>
+                </div>
+
+                <div class="delivery-options-grid">
+                  <!-- Standard Delivery -->
+                  <label class="delivery-option-card active">
+                    <div class="delivery-card-left">
+                      <input type="radio" name="delivery_method" value="standard" class="delivery-radio" checked>
+                      <div class="delivery-info">
+                        <h4>Standard Delivery</h4>
+                        <p>Estimated 4–6 business days • Insured shipment with tracking</p>
+                      </div>
+                    </div>
+                    <div class="delivery-price text-gold">
+                      $15.00 <span style="font-size: 0.75rem; color: var(--color-grey-dark); font-weight: normal;">(FREE over $250)</span>
+                    </div>
+                  </label>
+
+                  <!-- Express Delivery -->
+                  <label class="delivery-option-card">
+                    <div class="delivery-card-left">
+                      <input type="radio" name="delivery_method" value="express" class="delivery-radio">
+                      <div class="delivery-info">
+                        <h4>Express Delivery</h4>
+                        <p>Priority 1–2 business days • Dedicated courier with gift packaging</p>
+                      </div>
+                    </div>
+                    <div class="delivery-price">
+                      $35.00
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 4. Payment Methods (Frontend Demo Simulation) -->
+              <div class="checkout-section-block">
+                <div class="checkout-block-header">
+                  <h2 class="checkout-block-title">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>4. Payment Method</span>
+                  </h2>
+                </div>
+
+                <!-- Payment Selectors -->
+                <div class="payment-methods-grid">
+                  <label class="payment-method-selector active" data-method="cod">
+                    <input type="radio" name="payment_choice" value="cod" checked>
+                    <span>Cash on Delivery</span>
+                  </label>
+
+                  <label class="payment-method-selector" data-method="upi">
+                    <input type="radio" name="payment_choice" value="upi">
+                    <span>UPI Demo Payment</span>
+                  </label>
+
+                  <label class="payment-method-selector" data-method="card">
+                    <input type="radio" name="payment_choice" value="card">
+                    <span>Card Demo Payment</span>
+                  </label>
+                </div>
+
+                <!-- Panel: Cash on Delivery -->
+                <div class="payment-method-panel active" id="payment-panel-cod">
+                  <div class="cod-notice-box">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <div>
+                      <strong>Cash on Delivery (COD) Selected</strong>
+                      <p>Pay with cash or UPI directly to our delivery courier upon receiving your package. Inspect your garments before completing payment.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel: UPI Demo Payment -->
+                <div class="payment-method-panel" id="payment-panel-upi">
+                  <div class="demo-payment-disclaimer">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Frontend demo simulation. No actual funds are deducted.</span>
+                  </div>
+                  <div class="upi-apps-icons">
+                    <span class="upi-app-badge">Google Pay</span>
+                    <span class="upi-app-badge">PhonePe</span>
+                    <span class="upi-app-badge">Paytm</span>
+                    <span class="upi-app-badge">BHIM UPI</span>
+                  </div>
+                  <div class="form-group" style="margin-bottom: 0;">
+                    <label for="demo-upi-id" class="form-label">Enter UPI ID (e.g. username@okhdfcbank)</label>
+                    <input type="text" id="demo-upi-id" class="form-input" placeholder="elena@oksbi">
+                    <span class="form-error-msg"></span>
+                  </div>
+                </div>
+
+                <!-- Panel: Card Demo Payment -->
+                <div class="payment-method-panel" id="payment-panel-card">
+                  <div class="demo-payment-disclaimer">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <span>Frontend demo payment selection. Do not enter real or sensitive credentials.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="card-number" class="form-label">Demo Card Number</label>
+                    <div class="card-input-wrapper">
+                      <input type="text" id="card-number" class="form-input" placeholder="4111 •••• •••• 1111" maxlength="19">
+                      <i class="fa-solid fa-credit-card card-brand-icon" id="card-brand-icon"></i>
+                    </div>
+                    <span class="form-error-msg"></span>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="card-expiry" class="form-label">MM / YY</label>
+                      <input type="text" id="card-expiry" class="form-input" placeholder="12 / 28" maxlength="7">
+                      <span class="form-error-msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="card-cvv" class="form-label">Demo CVV</label>
+                      <input type="password" id="card-cvv" class="form-input" placeholder="•••" maxlength="3">
+                      <span class="form-error-msg"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PLACE ORDER BUTTON -->
+              <div class="checkout-submit-wrap">
+                <button type="submit" id="place-order-btn" class="btn btn-primary btn-block btn-lg">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>PLACE ORDER</span>
+                </button>
+                <p style="font-size: 0.75rem; color: var(--color-grey-dark); text-align: center; margin-top: 1rem;">
+                  By clicking Place Order, you authorize STACKLY to prepare and dispatch your curated collection.
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- RIGHT SIDE: ORDER SUMMARY -->
+          <div class="checkout-sidebar-col">
+            <aside class="checkout-summary-card">
+              <h3 class="checkout-summary-title">Order Summary</h3>
+
+              <!-- Products Review List: Images, Titles, Quantities, Unit Prices -->
+              <div class="checkout-items-list" id="checkout-items-list">
+                <!-- Rendered dynamically by checkout.js -->
+              </div>
+
+              <!-- Coupon Box in Checkout -->
+              <div class="checkout-promo-box">
+                <form id="checkout-promo-form">
+                  <div class="promo-input-group">
+                    <input type="text" id="checkout-promo-input" placeholder="Coupon Code (e.g. STACK10)" aria-label="Coupon code">
+                    <button type="submit" class="btn btn-dark btn-sm">Apply</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Subtotal, Discount, Delivery Fee, Tax, Final Amount -->
+              <div class="summary-breakdown-container" id="checkout-totals-summary">
+                <!-- Rendered dynamically by checkout.js -->
+              </div>
+
+              <!-- Guarantees -->
+              <div class="boutique-guarantees">
+                <div class="guarantee-item">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>256-Bit SSL Encrypted Processing</span>
+                </div>
+                <div class="guarantee-item">
+                  <i class="fa-solid fa-rotate-left"></i>
+                  <span>30-Day Complimentary Boutique Returns</span>
+                </div>
+                <div class="guarantee-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>100% Certified Authentic Luxury</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="order-confirmation-modal" id="order-confirmation-modal" role="dialog" aria-modal="true" aria-label="Order Confirmation">
+    <div class="confirmation-card">
+      <!-- Animated Success Icon -->
+      <div class="confirmation-icon-wrap">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <!-- Heading & Thank You Message -->
+      <h2 class="confirmation-title">YOUR ORDER IS CONFIRMED!</h2>
+      <p class="confirmation-subtitle">
+        Thank you for shopping with STACKLY. Your curated pieces are now being prepared for tailored dispatch.
+      </p>
+
+      <!-- Order Receipt Details -->
+      <div class="order-receipt-box">
+        <div class="receipt-header-row">
+          <div>
+            Order Reference: <strong id="modal-order-number">STK-000000</strong>
+          </div>
+          <span id="modal-order-date">Date</span>
+        </div>
+
+        <div class="receipt-meta-grid">
+          <div>
+            Client Details:
+            <strong id="modal-customer-name">Client Name</strong>
+            <span id="modal-customer-email">email@domain.com</span>
+            <span id="modal-customer-phone">+91 9090909090</span>
+          </div>
+          <div>
+            Delivery Destination:
+            <strong id="modal-customer-address">Address Line</strong>
+            <span id="modal-shipping-type">Standard Delivery</span>
+            <span id="modal-payment-type" style="color: var(--color-gold); font-weight: 600;">Payment</span>
+          </div>
+        </div>
+
+        <!-- Purchased items recap -->
+        <div class="modal-items-recap" id="modal-items-recap"></div>
+
+        <div class="receipt-total-row">
+          <span>Total Authorized Amount:</span>
+          <span class="text-gold" id="modal-order-total">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Modal Actions -->
+      <div class="confirmation-actions">
+        <button type="button" class="btn btn-outline" id="print-receipt-btn">
+          <i class="fa-solid fa-print"></i>
+          <span>Print Receipt</span>
+        </button>
+        <a href="index.html" class="btn btn-primary" id="return-boutique-btn">
+          <span>Continue Shopping</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-bar" style="border-top: none; padding-top: 0;">
+        <p class="footer-copyright">
+          &copy; 2026 STACKLY Maison Inc. All rights reserved. Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript.
+        </p>
+        <div class="footer-payment-badges">
+          <img src="assets/icons/visa.svg" alt="Visa Accepted">
+          <img src="assets/icons/mastercard.svg" alt="Mastercard Accepted">
+          <img src="assets/icons/amex.svg" alt="American Express Accepted">
+          <img src="assets/icons/applepay.svg" alt="Apple Pay Accepted">
+          <img src="assets/icons/paypal.svg" alt="PayPal Accepted">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
