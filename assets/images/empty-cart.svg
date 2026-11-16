@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <circle cx="120" cy="120" r="100" fill="#FAF8F5" stroke="#E9E7E2" stroke-width="1.5"/>
+  <circle cx="120" cy="120" r="85" fill="none" stroke="#B69A65" stroke-opacity="0.25" stroke-dasharray="3 3"/>
+  <!-- Elegant shopping bag wireframe -->
+  <path d="M85 95 L75 170 C75 174 78 178 82 178 H158 C162 178 165 174 165 170 L155 95 H85Z" stroke="#171717" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <!-- Bag handle -->
+  <path d="M102 95 V80 C102 70 110 62 120 62 C130 62 138 70 138 80 V95" stroke="#B69A65" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Sparkles -->
+  <path d="M175 75 L178 85 L188 88 L178 91 L175 101 L172 91 L162 88 L172 85 Z" fill="#B69A65"/>
+  <circle cx="65" cy="105" r="3" fill="#B69A65" opacity="0.6"/>
+</svg>

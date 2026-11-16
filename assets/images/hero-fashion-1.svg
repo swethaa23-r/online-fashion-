@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="editorialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F1E1C"/>
+      <stop offset="50%" stop-color="#171717"/>
+      <stop offset="100%" stop-color="#0F0E0C"/>
+    </linearGradient>
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8C398"/>
+      <stop offset="50%" stop-color="#B69A65"/>
+      <stop offset="100%" stop-color="#8F7441"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#editorialGrad)"/>
+  
+  <!-- Architectural Couture Lines -->
+  <circle cx="400" cy="450" r="280" fill="none" stroke="#B69A65" stroke-opacity="0.15" stroke-width="1.5"/>
+  <circle cx="400" cy="450" r="320" fill="none" stroke="#B69A65" stroke-opacity="0.08" stroke-width="1"/>
+  <line x1="100" y1="200" x2="700" y2="800" stroke="#B69A65" stroke-opacity="0.1" stroke-width="1"/>
+  <line x1="700" y1="200" x2="100" y2="800" stroke="#B69A65" stroke-opacity="0.1" stroke-width="1"/>
+  
+  <!-- Haute Silhouette Form -->
+  <path d="M400,220 C360,250 340,310 345,380 C350,440 330,500 310,620 C290,740 270,880 260,950 L540,950 C530,880 510,740 490,620 C470,500 450,440 455,380 C460,310 440,250 400,220 Z" fill="#242220" stroke="#B69A65" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- Gold Accent Drape -->
+  <path d="M400,280 Q430,360 480,480 Q520,590 460,780 Q420,890 400,950" fill="none" stroke="url(#goldShimmer)" stroke-width="2.5" stroke-dasharray="4 2"/>
+  <path d="M380,310 Q340,420 330,580 Q320,720 360,950" fill="none" stroke="url(#goldShimmer)" stroke-width="1.5" stroke-opacity="0.6"/>
+  
+  <!-- Haute Typography Badge -->
+  <rect x="250" y="80" width="300" height="40" fill="none" stroke="#B69A65" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="400" y="105" font-family="'Playfair Display', Georgia, serif" font-size="14" fill="#B69A65" letter-spacing="6" text-anchor="middle">AUTUMN / WINTER EDIT</text>
+  
+  <!-- Magazine Editorial Issue Details -->
+  <text x="70" y="940" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#8F8C84" letter-spacing="3">VOL. 08 // ATELIER COLLECTION</text>
+  <text x="730" y="940" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#B69A65" letter-spacing="3" text-anchor="end">HAUTE COUTURE</text>
+</svg>
